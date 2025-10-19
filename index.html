@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board - Public View</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📢</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📢 Notice Board</h1>
+            <nav>
+                <a href="./admin.html" class="admin-link">Admin Panel</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="hero">
+            <h2>Latest Notices</h2>
+            <p>Stay updated with the latest announcements and information.</p>
+        </section>
+
+        <section class="notices-section">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading notices...</p>
+            </div>
+            
+            <div id="notices-container" class="notices-container"></div>
+            
+            <div id="error-message" class="error-message" style="display: none;">
+                <h3>⚠️ Error</h3>
+                <p id="error-text"></p>
+                <button onclick="location.reload()" class="btn btn-primary">Retry</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Notice Management System. Built with Node.js, Express, and Prisma.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
